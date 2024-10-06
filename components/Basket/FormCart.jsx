@@ -154,6 +154,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
+              inputProps={{ maxLength: 50 }} // Ограничиваем количество символов для имени
             />
           )}
         />
@@ -176,6 +177,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
+              inputProps={{ maxLength: 16 }} // Ограничиваем ввод до 16 символов
             />
           )}
         />
@@ -255,6 +257,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
+              inputProps={{ maxLength: 4 }} // Ограничиваем ввод до 4 символов
             />
           )}
         />
@@ -277,7 +280,7 @@ export default function PaymentForm() {
 
       <Snackbar
         open={openSnackbar}
-        autoHideDuration={1000}
+        autoHideDuration={10000}
         onClose={handleCloseSnackbar}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         sx={{
@@ -294,7 +297,7 @@ export default function PaymentForm() {
           onClose={handleCloseSnackbar}
           severity="success"
           sx={{
-            width: "100%",
+            width: "300%",
             fontWeight: "bold",
           }}
         >

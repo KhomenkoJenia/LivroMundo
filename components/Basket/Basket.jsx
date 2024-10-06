@@ -60,6 +60,7 @@ export default function Basket() {
                 image={item.image}
                 onIcrease={() => cartCtx.addItem(item)}
                 onDecrease={() => cartCtx.removeItem(item.id)}
+                clearCart={() => cartCtx.clearItemCompletely(item.id)}
               />
             ))}
           </List>
@@ -73,7 +74,7 @@ export default function Basket() {
               color: "#000000",
             }}
           >
-            There&aposs nothing here yet.
+            Nothing here yet
           </Typography>
         )}
 

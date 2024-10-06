@@ -14,6 +14,7 @@ export default function CartItem({
   onIcrease,
   onDecrease,
   image,
+  clearCart,
 }) {
   return (
     <Box
@@ -79,7 +80,7 @@ export default function CartItem({
         </CardActions>
       </Card>
       <Image
-        onClick={onDecrease}
+        onClick={clearCart}
         className="delete-img"
         src="/assets/delete.svg"
         alt="Logo"

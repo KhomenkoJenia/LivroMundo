@@ -63,10 +63,10 @@ a.active-link {
   color: #1f1a09;
   padding: 7px 52px;
   border-radius: 30px;
+  transition: background-color 1s ease-in, transform 1s ease-in;
 }
 
-.button:hover,
-.button:active {
+.button:hover {
   background-color: #004832;
   border-color: #004832;
   transition: 0.9s;
