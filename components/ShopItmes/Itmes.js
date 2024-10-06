@@ -19,7 +19,7 @@ const DUMMY = [
   },
   {
     id: "m4",
-    name: "“A Hora da Estrela”",
+    name: "A Hora da Estrela",
     price: "30",
     image: "/assets/book4.png",
   },
@@ -67,7 +67,7 @@ const DUMMY = [
   },
   {
     id: "m12",
-    name: "“A Hora da Estrela”",
+    name: "A Hora da Estrela",
     price: "30",
     image: "/assets/book4.png",
   },
