@@ -63,7 +63,7 @@ export default function Footer() {
             fontSize: "14px",
           }}
         >
-          ©"LivroMundo" JSC, 2023 - 2024
+          ©LivroMundo JSC, 2023 - 2024
         </Typography>
       </Box>
 

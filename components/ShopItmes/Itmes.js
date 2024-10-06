@@ -31,13 +31,13 @@ const DUMMY = [
   },
   {
     id: "m6",
-    name: "Macunaíma",
+    name: "Macunaima",
     price: "90",
     image: "/assets/book6.png",
   },
   {
     id: "m7",
-    name: "A Arca de Noé",
+    name: "A Arca de Noe",
     price: "45",
     image: "/assets/book7.png",
   },
@@ -79,13 +79,13 @@ const DUMMY = [
   },
   {
     id: "m14",
-    name: "Macunaíma",
+    name: "Macunaima",
     price: "90",
     image: "/assets/book6.png",
   },
   {
     id: "m15",
-    name: "A Arca de Noé",
+    name: "A Arca de Noe",
     price: "45",
     image: "/assets/book7.png",
   },
