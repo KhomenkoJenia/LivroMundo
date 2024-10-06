@@ -73,7 +73,7 @@ export default function Basket() {
               color: "#000000",
             }}
           >
-            There's nothing here yet.
+            There&aposs nothing here yet.
           </Typography>
         )}
 
