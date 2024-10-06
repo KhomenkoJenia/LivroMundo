@@ -4,24 +4,141 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #000000;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8d8b8;
+  font-family: Roboto;
+  font-weight: 700;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.shop-img-cart {
+  border-radius: 30px;
+  margin-bottom: 12px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiSvgIcon-root {
+  color: black;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+
+  transform: scale(1.35);
+}
+.MuiBox-root.css-1lvtzne {
+  justify-content: flex-end;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: Popins;
+  color: #0a0a0a;
+  font-size: 16px;
+  border-radius: 40px;
+  padding: 10px 25px;
+}
+a:hover {
+  background-color: #ffd012;
+  transition: 0.5s ease-in;
+}
+a.active-link {
+  background-color: #ffd012;
+  transition: 0.5s ease-in;
+}
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #ffd012;
+  border: 1px solid #ffd012;
+  color: #1f1a09;
+  padding: 7px 52px;
+  border-radius: 30px;
+}
+
+.button:hover,
+.button:active {
+  background-color: #004832;
+  border-color: #004832;
+  transition: 0.9s;
+  color: #fdd349;
+}
+
+.text-button {
+  background-color: #ffd012;
+  border: 1px solid #ffd012;
+  color: #1f1a09;
+  padding: 17px 80px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.text-button:hover,
+.text-button:active {
+  background-color: #004832;
+  border-color: #004832;
+  transition: 0.9s;
+  color: #fdd349;
+}
+.button-change {
+  padding: 2px 8px;
+}
+
+.delete-img {
+  margin-left: 30px;
+}
+.delete-img:hover {
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+a.link-back {
+  font-family: "Poppins";
+}
+
+form label {
+  margin-bottom: 10px;
+}
+label.MuiFormLabel-root {
+  margin-bottom: 10px;
+  font-family: "Poppins";
+  color: white;
+}
+form .MuiSvgIcon-root {
+  color: rgb(255, 255, 255);
+  position: relative;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 2px;
+  transform: scale(1.35);
+  margin-top: -30px;
+}
+footer {
+  font-family: Popins;
+  font-size: 40px;
+}
+.footer-box img:hover {
+  transform: scale(1.1);
+  transition: 0.9s ease-in;
+}
+
+@media (max-width: 700px) {
+  .logo-img {
+    max-width: 144px;
+  }
+  .shop-img {
+    width: 34px;
+  }
+  .delete-img {
+    margin-left: 10px;
   }
 }
