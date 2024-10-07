@@ -1,6 +1,6 @@
-export default function ButtonSale({ children }) {
+export default function ButtonSale({ children, ...props }) {
   return (
-    <button className="sale-button">
+    <button className="sale-button" {...props}>
       <div>
         <span>
           <p>{children}</p>
