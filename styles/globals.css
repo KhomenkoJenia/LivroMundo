@@ -63,7 +63,6 @@ a.active-link {
   color: #1f1a09;
   padding: 7px 52px;
   border-radius: 30px;
-  transition: background-color 1s ease-in, transform 1s ease-in;
 }
 
 .button:hover {
@@ -141,4 +140,63 @@ footer {
   .delete-img {
     margin-left: 10px;
   }
+}
+
+.sale-button {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 140px;
+  height: 40px;
+  border-radius: 30px;
+
+  overflow: hidden;
+  color: #1f1a09;
+  text-align: center;
+}
+
+.sale-button div {
+  transform: translateY(0px);
+  width: 100%;
+}
+
+.sale-button,
+.sale-button div {
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sale-button div span {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  padding: 10px 20px;
+}
+
+.sale-button div:nth-child(1) {
+  background-color: #fdd349;
+}
+
+.sale-button div:nth-child(2) {
+  background-color: #21dc62;
+}
+
+.sale-button:hover {
+  box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+}
+
+.sale-button:hover div {
+  transform: translateY(-40px);
+}
+
+.sale-button p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #141414;
+}
+
+.sale-button:active {
+  transform: scale(0.95);
 }

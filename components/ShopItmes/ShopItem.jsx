@@ -7,6 +7,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import ButtonSale from "../UI/ButtonSale";
 
 export default function ShopItem({ item }) {
   const cartCtx = useContext(CartContext);
@@ -66,7 +67,7 @@ export default function ShopItem({ item }) {
         <Typography sx={{ color: "#FF0000" }}>
           {currencyFormatter.format(item.price)}
         </Typography>
-        <Button onClick={handleAddMealToCart}>BUY</Button>
+        <ButtonSale onClick={handleAddMealToCart}>BUY</ButtonSale>
       </CardActions>
     </Card>
   );
