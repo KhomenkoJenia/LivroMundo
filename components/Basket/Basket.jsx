@@ -69,7 +69,7 @@ export default function Basket() {
             sx={{
               fontFamily: "Poppins",
               fontWeight: "400",
-              fontSize: "40px",
+              fontSize: { xs: "20px", md: "40px" },
               padding: "40px",
               color: "#000000",
             }}

@@ -154,7 +154,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
-              inputProps={{ maxLength: 50 }} // Ограничиваем количество символов для имени
+              inputProps={{ maxLength: 50 }}
             />
           )}
         />
@@ -177,7 +177,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
-              inputProps={{ maxLength: 16 }} // Ограничиваем ввод до 16 символов
+              inputProps={{ maxLength: 16 }}
             />
           )}
         />
@@ -257,7 +257,7 @@ export default function PaymentForm() {
               error={!!fieldState.error}
               helperText={fieldState.error ? fieldState.error.message : ""}
               sx={textFieldStyles}
-              inputProps={{ maxLength: 4 }} // Ограничиваем ввод до 4 символов
+              inputProps={{ maxLength: 4 }}
             />
           )}
         />

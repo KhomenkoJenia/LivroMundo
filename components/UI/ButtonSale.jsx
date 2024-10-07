@@ -8,7 +8,7 @@ export default function ButtonSale({ children, ...props }) {
       </div>
       <div>
         <span>
-          <p>YEP</p>
+          <p>ADD</p>
         </span>
       </div>
     </button>
