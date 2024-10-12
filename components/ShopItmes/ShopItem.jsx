@@ -1,20 +1,22 @@
-import { useContext } from "react";
 import { currencyFormatter } from "../../utl/formatting";
-import Button from "../UI/Button";
-import CartContext from "../../store/CartContext";
+import { useDispatch } from "react-redux";
+
 import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 import ButtonSale from "../UI/ButtonSale";
+import { addItem } from "../../store/slice/CartSlice";
 
 export default function ShopItem({ item }) {
-  const cartCtx = useContext(CartContext);
+  const dispatch = useDispatch();
 
   function handleAddMealToCart() {
-    cartCtx.addItem(item);
+    dispatch(addItem(item));
   }
+
   return (
     <Card
       sx={{
@@ -25,13 +27,22 @@ export default function ShopItem({ item }) {
         margin: { xs: "15px 7px", md: "28px 7px" },
       }}
     >
-      <Image
-        src={`${item.image}`}
-        alt={item.name}
-        width={307}
-        height={276}
-        className="shop-img-cart"
-      />
+      <Box
+        sx={{
+          width: 307,
+          position: "relative",
+          height: 290,
+          marginBottom: "20px",
+        }}
+      >
+        <Image
+          src={`${item.image}`}
+          alt={item.name}
+          layout="fill" // Используем fill для того, чтобы изображение заполнило контейнер
+          objectFit="cover" // Масштабируем и обрезаем, чтобы заполнить контейнер
+          className="shop-img-cart"
+        />
+      </Box>
       <CardContent
         sx={{
           backgroundColor: "#ffffff",
@@ -42,11 +53,12 @@ export default function ShopItem({ item }) {
           variant="h5"
           component="div"
           sx={{
-            fontSize: "25px",
+            fontSize: "15px",
             textAlign: "center",
+            minHeight: 50,
           }}
         >
-          {item.name}
+          {item.title}
         </Typography>
       </CardContent>
       <CardActions

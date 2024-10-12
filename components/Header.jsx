@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import CartContext from "../store/CartContext";
+import { useSelector } from "react-redux";
 import logoImg from "/public/assets/logo.svg";
 import buyImg from "/public/assets/buy.svg";
 import {
@@ -21,9 +21,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
   const router = useRouter();
-  const cartCtx = useContext(CartContext);
 
-  const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
+  const items = useSelector((state) => state.cart.items);
+
+  const totalCartItems = items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity;
   }, 0);
 

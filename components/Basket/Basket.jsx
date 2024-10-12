@@ -1,15 +1,22 @@
-import { useContext } from "react";
-import CartContext from "../../store/CartContext";
 import { currencyFormatter } from "../../utl/formatting";
 import FormCart from "./FormCart";
 import CartItem from "./CartItem";
 import { Box, List, Typography } from "@mui/material";
 import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  addItem,
+  removeItem,
+  clearItemCompletely,
+} from "../../store/slice/CartSlice";
 
 export default function Basket() {
-  const cartCtx = useContext(CartContext);
+  const items = useSelector((state) => state.cart.items);
+  const itemsLength = items.length;
+  const dispatch = useDispatch();
 
-  const cartTotal = cartCtx.items.reduce(
+  const cartTotal = items.reduce(
     (totalPrice, item) => totalPrice + item.quantity * item.price,
     0
   );
@@ -49,18 +56,18 @@ export default function Basket() {
         >
           Shopping Cart
         </Typography>
-        {cartCtx.items.length > 0 ? (
+        {itemsLength > 0 ? (
           <List>
-            {cartCtx.items.map((item) => (
+            {items.map((item) => (
               <CartItem
                 key={item.id}
                 name={item.name}
                 quantity={item.quantity}
                 price={item.price}
                 image={item.image}
-                onIcrease={() => cartCtx.addItem(item)}
-                onDecrease={() => cartCtx.removeItem(item.id)}
-                clearCart={() => cartCtx.clearItemCompletely(item.id)}
+                onIcrease={() => dispatch(addItem(item))}
+                onDecrease={() => dispatch(removeItem(item.id))}
+                clearCart={() => dispatch(clearItemCompletely(item.id))}
               />
             ))}
           </List>
